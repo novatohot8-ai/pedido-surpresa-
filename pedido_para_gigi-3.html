@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8f3f7">
+<title>surpresaaa! 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;color:#34434a;background:#f8f3f7;
+  font-family:Poppins,Arial,sans-serif;overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:-3;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(255,75,145,.14),transparent 28%),
+    radial-gradient(circle at 80% 70%,rgba(160,50,255,.12),transparent 30%),
+    linear-gradient(135deg,#f8f3f7,#eef7fb 55%,#f8f3f7);
+}
+#stars{position:fixed;inset:0;z-index:-2;pointer-events:none}
+.star{
+  position:absolute;width:2px;height:2px;border-radius:50%;
+  background:#fff;opacity:.55;animation:twinkle 3s infinite ease-in-out;
+}
+@keyframes twinkle{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:.9;transform:scale(1.3)}}
+
+.screen{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  padding:28px 20px;position:relative;
+}
+.card{
+  width:min(720px,100%);padding:38px 28px;text-align:center;
+  border:1px solid rgba(142,191,209,.32);border-radius:28px;
+  background:rgba(255,255,255,.68);backdrop-filter:blur(15px);
+  box-shadow:0 25px 90px rgba(0,0,0,.45);
+}
+.kicker{font-size:.78rem;letter-spacing:4px;text-transform:uppercase;color:#8ebfd1;margin-bottom:16px}
+h1,h2{font-family:"Cormorant Garamond",serif}
+h1{font-size:clamp(3rem,11vw,6rem);line-height:.9;margin-bottom:22px}
+h2{font-size:clamp(2.2rem,8vw,4rem);line-height:1.05;margin-bottom:18px}
+p{color:#52626a;line-height:1.8;font-size:1rem}
+.highlight{color:#e99ab8}
+.btn{
+  border:0;cursor:pointer;margin-top:28px;padding:15px 25px;border-radius:999px;
+  color:#fff;font-weight:600;font-size:.95rem;
+  background:linear-gradient(135deg,#f5a9c4,#a9cfe0);
+  box-shadow:0 10px 35px rgba(255,63,142,.25);
+  transition:.25s transform,.25s box-shadow;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 15px 45px rgba(255,63,142,.35)}
+.hidden{display:none!important}
+.fade-in{animation:fade .8s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+.story{max-width:800px;margin:auto;padding:80px 20px}
+.story-title{text-align:center;margin-bottom:35px}
+.intro{
+  padding:28px;border-left:2px solid #9bc8d8;
+  background:linear-gradient(90deg,rgba(245,169,196,.16),rgba(169,207,224,.08),transparent);
+  border-radius:0 20px 20px 0;margin-bottom:55px;
+}
+.qualities{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.quality{
+  padding:24px;text-align:left;border-radius:22px;
+  border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.62);
+  transition:.3s;
+}
+.quality:hover{transform:translateY(-5px);border-color:rgba(255,120,175,.4)}
+.number{font-size:.72rem;letter-spacing:2px;color:#8ebfd1}
+.quality h3{margin:7px 0 8px;font-size:1.05rem}
+.quality p{font-size:.9rem;line-height:1.65}
+.next{text-align:center;margin-top:40px}
+
+.final{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:30px 20px;
+}
+.final .card{position:relative;overflow:hidden}
+.heart-big{font-size:4.5rem;animation:pulse 1.4s infinite}
+@keyframes pulse{50%{transform:scale(1.12)}}
+.signature{margin-top:25px;color:#8ebfd1;font-family:"Cormorant Garamond",serif;font-size:1.8rem}
+
+.modal{
+  position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;
+  padding:20px;background:rgba(68,84,92,.30);backdrop-filter:blur(9px);
+}
+.modal-box{
+  width:min(540px,100%);padding:35px 25px;text-align:center;border-radius:28px;
+  background:linear-gradient(145deg,#edf7fa,#f8f2f7);
+  border:1px solid rgba(255,140,190,.3);box-shadow:0 25px 100px rgba(0,0,0,.6);
+  animation:pop .45s cubic-bezier(.2,.8,.2,1);
+}
+@keyframes pop{from{opacity:0;transform:scale(.75)}to{opacity:1;transform:scale(1)}}
+.modal-box h2{font-size:2.5rem}
+.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:25px}
+.yes{
+  border:0;cursor:pointer;padding:14px 24px;border-radius:999px;
+  background:#f3a3c0;color:#fff;font-weight:700;box-shadow:0 8px 25px rgba(255,76,152,.25)
+}
+.yes:hover{transform:scale(1.04)}
+.heart{position:fixed;z-index:30;pointer-events:none;font-size:24px;animation:floatUp 2.8s ease-out forwards}
+@keyframes floatUp{
+  from{opacity:1;transform:translateY(0) scale(.7) rotate(0)}
+  to{opacity:0;transform:translateY(-100vh) scale(1.5) rotate(25deg)}
+}
+.small{font-size:.78rem;color:#7f8f96;margin-top:15px}
+
+@media(max-width:620px){
+  .qualities{grid-template-columns:1fr}
+  .card{padding:30px 20px}
+  .intro{padding:22px}
+  p{font-size:.94rem}
+}
+
+.music-control{
+  position:fixed;right:16px;bottom:16px;z-index:15;
+  display:flex;align-items:center;gap:8px;padding:10px 14px;
+  border:1px solid rgba(142,191,209,.35);border-radius:999px;
+  background:rgba(255,255,255,.78);backdrop-filter:blur(12px);
+  color:#58727c;font-size:.78rem;font-weight:600;
+  box-shadow:0 8px 30px rgba(75,115,130,.14);cursor:pointer;
+  transition:.25s;
+}
+.music-control:hover{transform:translateY(-2px)}
+.music-control span:first-child{font-size:1.05rem;color:#e99ab8}
+
+</style>
+</head>
+<body>
+
+<div id="stars"></div>
+
+<audio id="loveSong" preload="auto" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+<div id="musicControl" class="music-control hidden" onclick="toggleMusic(event)">
+  <span id="musicIcon">♫</span><span id="musicText">Música</span>
+</div>
+
+
+<!-- TELA DE ENTRADA -->
+<section class="screen" id="start">
+  <div class="card fade-in">
+    <div class="kicker">Uma coisa só sua</div>
+    <h1>Amor,<br><span class="highlight">desbloqueia.</span></h1>
+    <p>Eu poderia simplesmente te mandar uma mensagem...</p>
+    <p>Mas você merece algo um pouquinho mais especial.</p>
+    <button class="btn" onclick="unlock()">🔐 Desbloquear</button>
+    <div class="small">Prometo que vale a pena continuar.</div>
+  </div>
+</section>
+
+<!-- HISTÓRIA -->
+<section class="story hidden" id="story">
+  <div class="story-title">
+    <div class="kicker">Capítulo 01</div>
+    <h2>Como tudo começou...</h2>
+  </div>
+
+  <div class="intro fade-in">
+    <p>
+      Às vezes, as coisas mais especiais começam de um jeito completamente
+      inesperado. A gente se conheceu pelo Instagram, através de uma simples
+      conversa, e eu jamais imaginaria que alguém que eu conheci por uma tela
+      poderia se tornar tão importante pra mim.
+    </p>
+    <br>
+    <p>
+      Ainda não tivemos nosso primeiro encontro, ainda faltam muitos momentos
+      para viver juntos... mas mesmo assim, você conseguiu despertar em mim
+      uma vontade enorme de te conhecer cada vez mais, cuidar de você e fazer
+      parte da sua vida.
+    </p>
+    <br>
+    <p>
+      E foi pensando nisso que eu fiz isso aqui. ❤️
+    </p>
+  </div>
+
+  <div class="story-title">
+    <div class="kicker">Capítulo 02</div>
+    <h2>7 coisas que eu admiro em você</h2>
+  </div>
+
+  <div class="qualities">
+    <article class="quality">
+      <div class="number">01 — SEU JEITO</div>
+      <h3>Você tem um jeito único</h3>
+      <p>Tem alguma coisa na sua maneira de ser que me prende a atenção e faz eu querer descobrir cada vez mais sobre você.</p>
+    </article>
+    <article class="quality">
+      <div class="number">02 — SEU SORRISO</div>
+      <h3>Seu sorriso</h3>
+      <p>Mesmo por fotos e pela tela do celular, seu sorriso tem aquele negócio capaz de mudar completamente meu humor.</p>
+    </article>
+    <article class="quality">
+      <div class="number">03 — SUA PERSONALIDADE</div>
+      <h3>Sua personalidade</h3>
+      <p>Você não precisa tentar ser outra pessoa para chamar minha atenção. É justamente sendo você que consegue me conquistar.</p>
+    </article>
+    <article class="quality">
+      <div class="number">04 — SUA FORÇA</div>
+      <h3>A mulher determinada que você é</h3>
+      <p>Eu admiro a forma como você corre atrás das suas coisas e continua sendo você mesma, mesmo quando as coisas não são fáceis.</p>
+    </article>
+    <article class="quality">
+      <div class="number">05 — SEU CORAÇÃO</div>
+      <h3>Seu coração</h3>
+      <p>Pelo jeito que você trata as pessoas e pelas pequenas atitudes que eu fui conhecendo, dá pra perceber o quanto você tem um coração bonito.</p>
+    </article>
+    <article class="quality">
+      <div class="number">06 — SEU JEITO DE CONVERSAR</div>
+      <h3>Você faz a conversa valer a pena</h3>
+      <p>Uma conversa com você nunca parece só mais uma conversa. Eu gosto de estar ali, falando com você, mesmo quando o assunto é qualquer coisa.</p>
+    </article>
+    <article class="quality" style="grid-column:1/-1">
+      <div class="number">07 — VOCÊ</div>
+      <h3>O conjunto de tudo</h3>
+      <p>No fim, acho que minha maior qualidade favorita em você é simplesmente você ser você. Não é uma coisa específica. É o conjunto inteiro que me fez chegar até aqui.</p>
+    </article>
+  </div>
+
+  <div class="next">
+    <button class="btn" onclick="ask()">Tem mais uma coisa... ❤️</button>
+  </div>
+</section>
+
+<!-- PEDIDO -->
+<div class="modal hidden" id="modal">
+  <div class="modal-box">
+    <div style="font-size:3rem">🥹❤️</div>
+    <div class="kicker">Capítulo 03 — A pergunta</div>
+    <h2>Então, princesa...</h2>
+    <p>Depois de tudo isso, eu só preciso saber uma coisa.</p>
+    <h2 style="font-size:2.7rem;margin-top:12px">Aceita namorar comigo?</h2>
+    <div class="buttons">
+      <button class="yes" onclick="accepted()">💗 SIM!</button>
+      <button class="yes" onclick="accepted()">🥹 CLARO!</button>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL -->
+<section class="final hidden" id="final">
+  <div class="card fade-in">
+    <div class="heart-big">❤️</div>
+    <div class="kicker">Capítulo 04 — Nós</div>
+    <h2>Então agora é oficial.</h2>
+    <p>
+      Amor, eu não sei explicar exatamente em que momento você deixou de ser
+      apenas uma menina que eu conheci no Instagram e passou a ser alguém que
+      eu realmente quero na minha vida.
+    </p>
+    <br>
+    <p>
+      Eu sei que ainda temos muita coisa para viver. Nosso primeiro encontro,
+      nosso primeiro abraço, nossas primeiras lembranças juntos... e talvez
+      seja justamente isso que torna tudo tão especial.
+    </p>
+    <br>
+    <p>
+      Eu quero conhecer cada detalhe seu, estar do seu lado, te fazer sorrir,
+      te apoiar nos seus sonhos e construir momentos que um dia a gente vai
+      lembrar e pensar: <strong>"caramba, olha onde tudo começou."</strong>
+    </p>
+    <br>
+    <p>
+      Obrigado por ter aparecido na minha vida de uma forma tão inesperada.
+      Eu espero poder fazer você se sentir tão especial quanto você me faz
+      sentir.
+    </p>
+    <div class="signature">Agora começa a nossa história. 💗</div>
+  </div>
+</section>
+
+<script>
+function makeStars(){
+  const box=document.getElementById('stars');
+  for(let i=0;i<90;i++){
+    const s=document.createElement('span');
+    s.className='star';
+    s.style.left=Math.random()*100+'%';
+    s.style.top=Math.random()*100+'%';
+    s.style.animationDelay=(Math.random()*3)+'s';
+    s.style.animationDuration=(2+Math.random()*4)+'s';
+    box.appendChild(s);
+  }
+}
+makeStars();
+
+function unlock(){
+  document.getElementById('start').classList.add('hidden');
+  const story=document.getElementById('story');
+  story.classList.remove('hidden');
+  document.getElementById('musicControl').classList.remove('hidden');
+
+  const song=document.getElementById('loveSong');
+  song.volume=0.42;
+  song.play().catch(()=>{});
+
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function toggleMusic(event){
+  event.stopPropagation();
+  const song=document.getElementById('loveSong');
+  const icon=document.getElementById('musicIcon');
+  const text=document.getElementById('musicText');
+
+  if(song.paused){
+    song.play().catch(()=>{});
+    icon.textContent='♫';
+    text.textContent='Música';
+  }else{
+    song.pause();
+    icon.textContent='🔇';
+    text.textContent='Pausada';
+  }
+}
+
+function ask(){
+  document.getElementById('modal').classList.remove('hidden');
+}
+
+function accepted(){
+  const song=document.getElementById('loveSong');
+  song.volume=0.58;
+  document.getElementById('modal').classList.add('hidden');
+  document.getElementById('story').classList.add('hidden');
+  document.getElementById('final').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+  hearts();
+}
+
+function hearts(){
+  const symbols=['❤️','💗','💕','💖','💘','🥹'];
+  for(let i=0;i<45;i++){
+    setTimeout(()=>{
+      const h=document.createElement('div');
+      h.className='heart';
+      h.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+      h.style.left=Math.random()*100+'vw';
+      h.style.bottom='-30px';
+      h.style.animationDuration=(2+Math.random()*2)+'s';
+      document.body.appendChild(h);
+      setTimeout(()=>h.remove(),4500);
+    },i*70);
+  }
+}
+</script>
+</body>
+</html>
