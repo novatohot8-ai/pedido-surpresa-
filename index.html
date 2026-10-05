@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Um cantinho só nosso 🩷</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box} :root{--pink:#FFD6E7;--softpink:#F8BBD0;--lightpink:#FFF0F6;--blue:#BDE7FF;--softblue:#D6F1FF;--lightblue:#EFF9FF;--text:#526777}
+html{scroll-behavior:smooth}body{font-family:Poppins,sans-serif;color:var(--text);background:linear-gradient(135deg,var(--lightpink),var(--lightblue));overflow-x:hidden}
+.particles{position:fixed;inset:0;pointer-events:none;z-index:2;overflow:hidden}.particle{position:absolute;opacity:.45;animation:float linear infinite}
+@keyframes float{0%{transform:translateY(110vh) rotate(0);opacity:0}15%{opacity:.5}85%{opacity:.45}100%{transform:translateY(-15vh) rotate(360deg);opacity:0}}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 20px;background:radial-gradient(circle at 15% 20%,#ffd6e7cc,transparent 30%),radial-gradient(circle at 85% 80%,#bde7ffcc,transparent 30%),linear-gradient(135deg,#fff0f6,#eff9ff)}
+.hero-card,.glass,.proposal-card{background:#ffffffba;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid #ffffffdd;border-radius:32px;box-shadow:0 30px 80px #d89db92e,0 20px 60px #74badc1f}
+.hero-card{width:min(900px,100%);padding:clamp(35px,7vw,75px);text-align:center;animation:appear 1.1s ease}
+@keyframes appear{from{opacity:0;transform:translateY(25px) scale(.97)}to{opacity:1;transform:none}}
+.small-heart{font-size:32px;animation:pulse 2s infinite;margin-bottom:18px}@keyframes pulse{50%{transform:scale(1.13)}}
+.eyebrow{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#72afd0;margin-bottom:18px}
+h1,.section-title,.proposal-card h2,.final-content h2{font-family:"Playfair Display",serif}
+h1{font-size:clamp(42px,8vw,76px);line-height:1.05;margin-bottom:24px;background:linear-gradient(135deg,#df91b0,#8fcce9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-text{max-width:650px;margin:auto;font-size:clamp(15px,2vw,18px);line-height:1.9}.scroll{margin-top:40px;font-size:13px;color:#89a6b8}
+section{padding:100px 20px}.inner{max-width:1050px;margin:auto}.section-title{text-align:center;font-size:clamp(35px,6vw,55px);color:#d88eac;margin-bottom:18px}.subtitle{text-align:center;max-width:650px;margin:0 auto 55px;line-height:1.8}
+.intro{background:linear-gradient(135deg,#ffd6e7a6,#d6f1ffb3)}.glass{padding:clamp(28px,5vw,55px)}.intro-text{text-align:center;font-size:17px;line-height:2}
+.qualities{background:linear-gradient(135deg,#eff9ff,#fff0f6)}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.quality{background:#ffffffc7;border-radius:25px;padding:28px;border:1px solid #fff;box-shadow:0 15px 40px #6eb5da14;transition:.35s}.quality:hover{transform:translateY(-7px)}.num{font-family:"Playfair Display";font-size:28px;color:#8fcce9;margin-bottom:10px}.quality h3{color:#d88eac;margin-bottom:9px}.quality p{line-height:1.7;font-size:14px}
+.letter{background:radial-gradient(circle at 20% 50%,#ffd6e7a6,transparent 30%),radial-gradient(circle at 80% 50%,#bde7ffa6,transparent 30%),#fff}.letter-card{max-width:800px;margin:auto;text-align:center}.letter-card p{line-height:2;font-size:17px;margin-bottom:22px}.signature{font-family:"Playfair Display";font-size:30px;color:#d88eac;margin-top:35px}
+.proposal{min-height:80vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ffd6e7,#d6f1ff)}.proposal-card{width:min(650px,100%);text-align:center;padding:55px 30px}.proposal-heart{font-size:55px;animation:pulse 1.8s infinite;margin-bottom:20px}.proposal-card h2{font-size:clamp(38px,7vw,58px);margin-bottom:18px;background:linear-gradient(135deg,#dc88aa,#78bfe0);-webkit-background-clip:text;background-clip:text;color:transparent}.proposal-card p{font-size:20px;margin-bottom:35px}.buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}.love-button{border:0;cursor:pointer;padding:16px 28px;min-width:150px;border-radius:22px;font:600 16px Poppins;color:#526777;background:linear-gradient(135deg,#f8bbd0,#bde7ff);box-shadow:0 10px 25px #c98eab33;transition:.3s}.love-button:hover{transform:scale(1.06)}.love-button:active{transform:scale(.96)}
+.final{min-height:100vh;display:none;align-items:center;justify-content:center;text-align:center;padding:30px;background:linear-gradient(135deg,#fff0f6,#eff9ff);position:relative}.final.show{display:flex;animation:appear 1.2s}.final-content{position:relative;z-index:5}.final-heart{font-size:clamp(90px,20vw,160px);filter:drop-shadow(0 0 25px #ffaaccb3);animation:pulse 1.6s infinite}.final h2{font-size:clamp(48px,10vw,80px);color:#d98dab}.girlfriend{font:clamp(28px,5vw,45px) "Playfair Display";color:#78b9d7;margin:8px 0 25px}.final p{max-width:650px;margin:auto;font-size:17px;line-height:2}
+.confetti{position:fixed;top:-30px;pointer-events:none;z-index:100;animation:fall 4s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+@media(max-width:650px){.grid{grid-template-columns:1fr}section{padding:75px 17px}.love-button{width:100%}.buttons{width:100%}.quality[style]{grid-column:auto!important}}
+</style>
+</head>
+<body>
+<div class="particles" id="particles"></div>
+
+<section class="hero"><div class="hero-card">
+<div class="small-heart">🩷</div><div class="eyebrow">um cantinho feito especialmente para você</div>
+<h1>Amor, isso é pra você.</h1>
+<p class="hero-text">Eu queria fazer alguma coisa diferente. Não apenas escrever uma mensagem, mas criar um pequeno lugar onde cada detalhe pudesse dizer aquilo que às vezes eu não consigo colocar em palavras.</p>
+<div class="scroll">↓ continua descendo, princesa...</div>
+</div></section>
+
+<section class="intro"><div class="inner"><h2 class="section-title">Antes de qualquer coisa... 🩵</h2><p class="subtitle">Tem algumas coisas que eu queria que você soubesse.</p>
+<div class="glass"><p class="intro-text">A gente ainda não viveu tudo que eu quero viver com você. Ainda existem lugares que não conhecemos juntos, abraços que ainda não aconteceram e um monte de histórias que ainda nem começaram.<br><br>Mas, mesmo assim, você conseguiu se tornar alguém muito especial pra mim.<br><br>Em pouco tempo, nossas conversas conseguiram ocupar um espaço enorme no meu coração. E quanto mais eu conheço você, mais vontade eu tenho de conhecer cada detalhe seu.<br><br>Seu jeito, suas manias, suas histórias, suas risadas... tudo aquilo que faz você ser você.</p></div></div></section>
+
+<section class="qualities"><div class="inner"><h2 class="section-title">7 coisas que eu amo em você 🩷</h2><p class="subtitle">E olha que escolher só sete foi difícil...</p>
+<div class="grid">
+<div class="quality"><div class="num">01</div><h3>Seu jeito</h3><p>Existe alguma coisa no seu jeito que me prende. Você tem uma forma única de ser, e eu simplesmente adoro isso.</p></div>
+<div class="quality"><div class="num">02</div><h3>Seu coração</h3><p>Dá pra perceber o quanto você se importa com quem ama. E isso mostra o coração lindo que você tem.</p></div>
+<div class="quality"><div class="num">03</div><h3>Seu sorriso</h3><p>Mesmo de longe, você consegue colocar um sorriso no meu rosto. Imagina quando eu puder ver esse sorriso de pertinho.</p></div>
+<div class="quality"><div class="num">04</div><h3>Sua personalidade</h3><p>Você tem seu próprio jeito de conversar, brincar e enxergar as coisas. É uma das coisas que mais me fazem gostar de você.</p></div>
+<div class="quality"><div class="num">05</div><h3>Sua força</h3><p>Mesmo quando você fica nervosa ou insegura, existe uma força em você que talvez você mesma nem perceba.</p></div>
+<div class="quality"><div class="num">06</div><h3>A paz que você traz</h3><p>Conversar com você consegue deixar meus dias mais leves. É uma sensação difícil de explicar, mas muito boa de sentir.</p></div>
+<div class="quality" style="grid-column:1/-1"><div class="num">07</div><h3>Você</h3><p>No fim, eu poderia escrever mil coisas aqui e ainda não seria suficiente. Eu gosto do conjunto inteiro. Das suas qualidades, das suas manias, dos seus detalhes e, principalmente, de você.</p></div>
+</div></div></section>
+
+<section class="letter"><div class="inner"><div class="glass letter-card"><h2 class="section-title">E tem mais uma coisa... 🤍</h2>
+<p>Eu não quero que o que existe entre nós fique apenas nas mensagens.</p><p>Quero transformar nossas conversas em momentos. Quero conhecer seu abraço, ouvir sua risada de perto, sair com você, criar memórias e descobrir tudo aquilo que ainda existe pra gente viver.</p><p>Talvez eu esteja sendo um pouquinho emocionado... mas eu não quero esconder o que sinto.</p><p>Porque você se tornou especial demais pra mim, vida.</p><div class="signature">Com carinho, seu bb. 🩵</div>
+</div></div></section>
+
+<section class="proposal"><div class="proposal-card"><div class="proposal-heart">🩷</div><h2>Amor...</h2><p>Você aceita namorar comigo?</p><div class="buttons"><button class="love-button" onclick="sayYes()">🩷 SIM!</button><button class="love-button" onclick="sayYes()">🩵 CLARO!</button></div></div></section>
+
+<section class="final" id="finalScreen"><div class="final-content"><div class="final-heart">🩷</div><h2>Amor</h2><div class="girlfriend">Minha namorada. 🩵</div><p>Que esse seja só o começo da nossa história.<br><br>Que ainda venham muitos momentos juntos, muitas risadas, muitos abraços, lugares pra conhecer e memórias pra guardar.<br><br>Eu escolho você.<br>Hoje, amanhã e em todos os capítulos que ainda vamos escrever. 🤍</p></div></section>
+
+<script>
+const particles=document.getElementById("particles"),symbols=["🩷","💗","🩵","🤍","✨"];
+function createParticle(){const p=document.createElement("div");p.className="particle";p.textContent=symbols[Math.floor(Math.random()*symbols.length)];p.style.left=Math.random()*100+"vw";p.style.fontSize=10+Math.random()*16+"px";p.style.animationDuration=10+Math.random()*15+"s";p.style.animationDelay=Math.random()*5+"s";particles.appendChild(p);setTimeout(()=>p.remove(),26000)}setInterval(createParticle,700);
+function sayYes(){createConfetti();setTimeout(()=>{document.getElementById("finalScreen").classList.add("show");document.getElementById("finalScreen").scrollIntoView({behavior:"smooth"})},700)}
+function createConfetti(){const s=["🩷","🩵","🤍","✨","♡"];for(let i=0;i<70;i++){const p=document.createElement("div");p.className="confetti";p.textContent=s[Math.floor(Math.random()*s.length)];p.style.left=Math.random()*100+"vw";p.style.fontSize=12+Math.random()*18+"px";p.style.animationDuration=2.5+Math.random()*2.5+"s";p.style.animationDelay=Math.random()*.8+"s";document.body.appendChild(p);setTimeout(()=>p.remove(),6000)}}
+</script>
+</body>
+</html>
